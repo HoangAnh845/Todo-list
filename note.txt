@@ -1,0 +1,9 @@
+1, `npm create vite@latest`:
+    - Tạo ra một project mới với công cụ Vite.
+2, `Công cụ Vite`:
+    - Một công cụ build tool (công cụ để đóng gói mã nguồn) cho các ứng dụng web hiện đại, như Vue.js hoặc React.
+    - Cho phép bạn tạo ra các ứng dụng web nhanh hơn bằng cách sử dụng các tính năng như tải nhanh, hot module replacement và cache thông minh
+3, `npm i`:
+    - Câu lệnh trong Node.js sử dụng để cài đặt các package (hay còn gọi là thư viện, module, dependency) cho một project Node.js.
+4, `npm run dev`:
+    - Được sử dụng để khởi động server phát triển (development server) trong một project Node.js.
