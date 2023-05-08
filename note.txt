@@ -7,3 +7,10 @@
     - Câu lệnh trong Node.js sử dụng để cài đặt các package (hay còn gọi là thư viện, module, dependency) cho một project Node.js.
 4, `npm run dev`:
     - Được sử dụng để khởi động server phát triển (development server) trong một project Node.js.
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/HoangAnh845/Todo-list.git
+git push -u origin main
