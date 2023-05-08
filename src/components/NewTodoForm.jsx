@@ -1,4 +1,4 @@
-import { AddIcon } from "./icons/icons";
+import { AddIcon, ClearIcon } from "./icons/icons";
 import { useState } from "react";
 import tippy from "tippy.js";
 import notification from "./notification/notification";
@@ -38,15 +38,34 @@ function NewTodoForm({ onSubmit }) {
       <div className="form-group">
         {/* <label className="text-light mb-3">Create a task</label> */}
         <div className="d-flex align-items-center">
-          <input
-            id="item"
-            className="form-control text-light"
-            name="task"
-            type="text"
-            placeholder="Enter a task..."
-            value={newItem}
-            onChange={(e) => setNewItem(e.target.value)}
-          ></input>
+          <div className="d-flex align-items-center w-100 position-relative">
+            <input
+              id="item"
+              className="form-control text-light"
+              name="task"
+              type="text"
+              placeholder="Enter a task..."
+              value={newItem}
+              onChange={(e) => {
+                e.target.value.length > 0
+                  ? document
+                      .querySelector(".clearAdd")
+                      .classList.remove("d-none")
+                  : document.querySelector(".clearAdd").classList.add("d-none");
+                setNewItem(e.target.value);
+              }}
+            ></input>
+            <div
+              className="clearAdd position-absolute end-0 p-2 d-none"
+              onClick={(e) => {
+                e.target.classList.add("d-none");
+                document.querySelector("#item").value = "";
+              }}
+            >
+              <ClearIcon />
+            </div>
+          </div>
+
           <span className="addTodo ms-2 my-element" onClick={handleSumbit}>
             <AddIcon />
           </span>
@@ -56,19 +75,4 @@ function NewTodoForm({ onSubmit }) {
   );
 }
 
-/* 
-<form onSubmit={handleSumbit} className="new-item-form">
-  <div className="form-row">
-    <label htmlFor="item">New Item</label>
-    <input
-      id="item"
-      type="text"
-      value={newItem}
-      onChange={(e) => setNewItem(e.target.value)}
-    ></input>
-    <button className="btn">Add</button>
-  </div>
-</form>
-
-*/
 export default NewTodoForm;

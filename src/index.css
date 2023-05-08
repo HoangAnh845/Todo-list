@@ -57,7 +57,9 @@ h1 {
 .delete,
 .edit,
 .addTodo,
-.searchItem {
+.searchItem,
+.clearSearch,
+.clearAdd {
   cursor: pointer;
   color: hsl(200, 100%, 90%) !important;
 }
