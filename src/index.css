@@ -104,3 +104,7 @@ h1 {
     color-stop(0.86, rgb(28, 58, 148))
   );
 }
+
+.test {
+  background-color: red;
+}
